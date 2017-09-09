@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ES6</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.18/system.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        SystemJS.config({
+            transpiler: 'plugin-babela',
+            map: {
+                'plugin-babela': 'plugins/plugin-babel.js',
+                'systemjs-babel-build': './plugins/systemjs-babel-browser.js'
+            }
+        });
+        SystemJS.import('./scripts/app.js');
+    </script>
+</body>
+</html>
